@@ -153,9 +153,9 @@ LOGGING = {
             'level': 'INFO',
         },
 
-        'myapp': {
+        'app_2': {
             'handlers': ['console', 'file'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': True,
         },
     },

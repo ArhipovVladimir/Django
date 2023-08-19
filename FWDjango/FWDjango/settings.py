@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'less_1_app',
-    # 'seminar_1app',
+    'Less_2_model_app'
 ]
 
 MIDDLEWARE = [

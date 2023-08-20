@@ -158,6 +158,12 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
+
+        'hw1': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
     },
 }
 

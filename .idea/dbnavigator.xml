@@ -20,13 +20,19 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" object-ref="schemas/main/tables/Less_2_model_app_order" />
+      <object connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" object-ref="schemas/main/tables/Less_2_model_app_author" />
+      <object connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" object-ref="schemas/main/tables/Less_2_model_app_post" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.Less_2_model_app_order" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.auth_user" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.auth_user_groups" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.Less_2_model_app_post" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.auth_group" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.Less_2_model_app_author" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.django_session" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.Less_2_model_app_order_products" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.auth_permission" active-filter-id="EMPTY_FILTER" />

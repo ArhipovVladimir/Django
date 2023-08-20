@@ -13,10 +13,10 @@ class Command(BaseCommand):
         for i in range(1, count + 1):
             author = Author(name=f'Name{i}', email=f'mail{i}@mail.ru')
             author.save()
-        for j in range(1, count + 1):
-            post = Post(
-                title=f'Title{j}',
-                content=f'Text from{author.name} #{j} is bla bla bla many long text',
-                author=author
-            )
-            post.save()
+            for j in range(1, count + 1):
+                post = Post(
+                    title=f'Title{j}',
+                    content=f'Text from{author.name} #{j} is bla bla bla many long text',
+                    author=author
+                )
+                post.save()

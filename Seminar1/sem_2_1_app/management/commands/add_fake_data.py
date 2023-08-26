@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 # from sem_2_1_app.models import Author, Post
-# from Seminar1.sem_2_1_app.models import Author
+# from Seminar1prog.sem_2_1_app.models import Author
 from datetime import datetime
 from sem_2_1_app.models import Author
 

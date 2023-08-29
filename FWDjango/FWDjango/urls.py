@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from less_3_tmpl.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('less_1_app.urls')),
-    path('less2', include('Less_2_model_app.urls')),
+    path('prefix/', include('less_1_app.urls')),
+    path('less2/', include('Less_2_model_app.urls')),
+    path('less3/', include('less_3_tmpl.urls')),
+    path('', index)
 
 ]

@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'hw1',
     'sem_2_1_app',
     'hw2',
+    'sem_3_app',
+    'hw3'
 ]
 
 MIDDLEWARE = [
@@ -163,6 +165,12 @@ LOGGING = {
         },
 
         'hw1': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+
+        'sem_3_app': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
             'propagate': True,

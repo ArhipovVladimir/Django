@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class User(models.Model):
+class Client(models.Model):
     name = models.CharField(max_length=15)
     email = models.EmailField()
     phone = models.CharField(max_length=12)
@@ -17,17 +17,19 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     date_add = models.DateField(auto_now=True)
+    quantity = models.IntegerField()
 
     def __str__(self):
-        return f'Name: {self.name}, price: {self.price}, date_add:{self.date_add}'
+        return f'Name: {self.name}, price: {self.price}, quantity: {self.quantity} date_add:{self.date_add}'
 
 
 class Order(models.Model):
-    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
-    count_product = models.IntegerField()
+    count_products = models.IntegerField()
     date_ordered = models.DateTimeField(auto_now_add=True)
     total_price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
-        return f'Name: {self.customer}, product: {self.products}, date_order:{self.date_ordered}'
+        return f'Name: {self.client}, date_order:{self.date_ordered}, total_price:{self.total_price}'
+

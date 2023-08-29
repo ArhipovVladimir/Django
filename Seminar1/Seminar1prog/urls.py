@@ -22,5 +22,6 @@ urlpatterns = [
     path('', include('app1.urls')),
     path('app2/', include('app_2.urls')),
     path('hw1/', include('hw1.urls')),
-
+    path('sem3/', include('sem_3_app.urls')),
+    path('hw3/', include('hw3.urls')),
 ]

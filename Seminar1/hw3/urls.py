@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import get_order, get_orders
+from .views import get_order, get_orders, get_order_gt
 # from .views import year_post, MonthPost, post_detail
 # from .views import my_view
 # from .views import TemplIf
@@ -10,7 +10,7 @@ from .views import get_order, get_orders
 urlpatterns = [
      path('orders/', get_orders, name='orders'),
      path('order/<int:order_id>/', get_order, name='get_order'),
-     # path('hello2/', HelloView.as_view(), name='hello2'),
+     path('delta/<int:delta>/', get_order_gt, name='get_order_gt'),
      # path('posts/<int:year>/', year_post, name='year_post'),
      # path('posts/<int:year>/<int:month>/', MonthPost.as_view(), name='month_post'),
      # path('posts/<int:year>/<int:month>/<slug:slug>/', post_detail, name='post_detail'),

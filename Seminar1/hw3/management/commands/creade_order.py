@@ -28,8 +28,8 @@ class Command(BaseCommand):
        for client in Client.objects.all():
             # кол-во заказов у клиента от 1 до 5
             for _ in range(randint(1, 6)):
-                order = Order(client=client, count_products=randint(1, 10), total_price=randint(1, 10),
-                              date_ordered=f'{randint(2022, 2023)}-{randint(1, 12)}-{randint(1, 28)}')
+                order = Order(client=client, count_products=randint(1, 10), total_price=randint(1, 10))
+                              # date_ordered=f'{randint(2022, 2023)}-{randint(1, 12)}-{randint(1, 28)}')
                 order.save()
                 order_sum = 0
                 # кол-во товаров в заказе от 1 до 5

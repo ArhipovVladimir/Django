@@ -23,9 +23,10 @@ def get_order(request, order_id):
 def get_order_gt(request, delta):
     order_list = []
     orders = Order.objects.all()
+    corrent_date = datetime.now()
     for order in orders:
         print(order.date_order)
-        res_delta = (datetime.now() - order.date_order).days
+        res_delta = (corrent_date - order.date_order).days
         if res_delta > delta:
             order_list.append(order)
     context = {

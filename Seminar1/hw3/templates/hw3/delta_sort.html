@@ -2,13 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>delta</title>
+    <title>Сортировка по дате создания заказа</title>
 </head>
 <body>
-{{ delta }}
-    {% for order in orders %}
 
-    <h2>{{ order }}</h2>
+    {% for order, delta in orders.item %}
+
+        <h3> заказы меньше 7 дней </h3>
+        {% if delta < 7  %}
+        <p>{{ order }}</p>
+        {% enf if %}
+
+        <h3> заказы меньше от 7 до 30 дней </h3>
+        {% if delta > 7 and delta < 30  %}
+        <p>{{ order }}</p>
+        {% enf if %}
+
+        <h3> заказы меньше свыше 30 дней </h3>
+        {% if delta > 30 and delta < 365  %}
+        <p>{{ order }}</p>
+        {% enf if %}
+
 
     {% endfor %}
 </body>

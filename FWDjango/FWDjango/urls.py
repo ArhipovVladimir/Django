@@ -23,6 +23,6 @@ urlpatterns = [
     path('prefix/', include('less_1_app.urls')),
     path('less2/', include('Less_2_model_app.urls')),
     path('less3/', include('less_3_tmpl.urls')),
-    path('', index)
-
+    path('', index),
+    path('less4/', include('less_4_form.urls')),
 ]

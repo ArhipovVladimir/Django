@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'less_1_app',
     'Less_2_model_app',
     'less_3_tmpl',
+    'less_4_form',
 ]
 
 MIDDLEWARE = [
@@ -117,6 +118,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -152,6 +157,11 @@ LOGGING = {
         },
 
         'myapp': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'less_4_form': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,

@@ -26,7 +26,7 @@ def get_order_gt(request, delta):
     corrent_date = datetime.now()
     for order in orders:
         print(order.date_order)
-        res_delta = (corrent_date - order.date_order).days
+        res_delta = (corrent_date - order.date_order)
         if res_delta > delta:
             order_list.append(order)
     context = {
@@ -34,3 +34,17 @@ def get_order_gt(request, delta):
          'orders': order_list,
      }
     return render(request, "hw3/delta.html", context)
+
+
+def get_order_sort(request):
+    order_list_sort = {}
+    orders = Order.objects.all()
+    corrent_date = datetime.now()
+    for order in orders:
+        res_delta = (corrent_date - order.date_order).days
+        print(res_delta)
+        # order_list_sort.setdefault(order, res_delta)
+    context = {
+         'orders': order_list_sort,
+     }
+    return render(request, "hw3/delta_sort.html", context)

@@ -62,6 +62,6 @@ def upload_image(request):
             fs.save(image.name, image)
     else:
         form = ImageForm()
-    return render(request, 'less_4_form/upload_image.html', {'form': form})
+    return render(request, 'less_4_form/product.html', {'form': form})
 
 

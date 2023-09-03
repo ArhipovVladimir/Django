@@ -26,4 +26,5 @@ urlpatterns = [
     # path('sem2/', include('sem_2_1_app.urls')),
     path('sem3/', include('sem_3_app.urls')),
     path('sem4/', include('sem_4_app.urls')),
+    path('hw4/', include('hw4.urls')),
 ]

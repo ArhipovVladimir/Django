@@ -16,5 +16,5 @@ def about(response):
     logger.info(f'HttpResponse seite OK')
     return HttpResponse('<h1>Обо мне <h1>'
                         '<h3>Архипов Владимир<h3>'
-                        '<h4>студент GB  <h4>'
-                        '<h4>Алтайский край  <h4>')
+                        '<hw4>студент GB  <hw4>'
+                        '<hw4>Алтайский край  <hw4>')

@@ -1,0 +1,20 @@
+{% extends 'sem_3_app/bases_anton.html' %}
+
+{% block title %}Статья{% endblock %}
+
+{% block content %}
+    <h3>{{ post.head }}</h3>
+    <p>{{ post.content }}</p>
+    <hr>
+    <h4>Комментарии</h4>
+    {% for comment in comments %}
+        <p>
+            {{ comment.author }} {{ comment.created_at }}
+            {% if comment.changed_at %}
+                (измененно)
+            {% endif %}
+        </p>
+        <p>{{ comment.comment }}</p><br>
+    {% endfor %}
+{% endblock %}
+

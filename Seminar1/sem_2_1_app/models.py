@@ -32,10 +32,10 @@ class Author(models.Model):
         surname = models.CharField(max_length=100)
         email = models.EmailField()
         biography = models.TextField()
-        birthday = models.DateTimeField(auto_now=True)
+        birthday = models.DateTimeField()
 
         def __str__(self):
-            return f'Fullname: {self.name} {self.surname} email: {self.email} birthday:'
+            return f'Fullname: {self.name} {self.surname} email: {self.email}'
 
 
 class Article(models.Model):

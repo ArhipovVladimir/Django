@@ -1,0 +1,12 @@
+{% extends 'sem_3_app/bases_anton.html' %}
+
+<title>{{ title }}</title>
+{% block content %}
+<h1>{{ message }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <table>{{ form.as_table }}</table>
+    <input type="submit" value="Сохранить">
+</form>
+{% endblock %}

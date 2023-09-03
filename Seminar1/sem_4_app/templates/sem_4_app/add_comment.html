@@ -1,0 +1,13 @@
+{% extends 'sem_3_app/article.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    {{ block.super }}
+    <h3>{{ message }}</h3>
+    <form method="post">
+        {% csrf_token %}
+        <table>{{ form.as_table }}</table>
+        <input type="submit" value="Добавить">
+    </form><br><br><br>
+{% endblock %}

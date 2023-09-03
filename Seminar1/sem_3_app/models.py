@@ -53,3 +53,4 @@ class Comment(models.Model):
     make_date = models.DateTimeField(auto_now=True)
     # дата изменения (при создании равна дате создания)
     modify_date = models.DateTimeField(auto_now=True)
+

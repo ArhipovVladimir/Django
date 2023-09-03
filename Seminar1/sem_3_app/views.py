@@ -88,7 +88,7 @@ def get_articles(request, author_id):
     articles = Article.objects.filter(author__pk=author_id)
     # print(len(articles))
     context = {"articles": articles}
-    return render(request, "sem_3_app/orders.html", context)
+    return render(request, "sem_3_app/articles.html", context)
 
 
 def get_article(request, article_id):

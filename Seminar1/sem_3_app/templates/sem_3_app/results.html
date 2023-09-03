@@ -1,0 +1,12 @@
+{% extends 'sem_3_app/bases_anton.html' %}
+
+{% block title %}Результаты{% endblock %}
+
+{% block content %}
+    <h2>{{ head }}</h2>
+    <ul>
+    {% for count, result in results %}
+        <li>{{ count }}-й результат: {{ result }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

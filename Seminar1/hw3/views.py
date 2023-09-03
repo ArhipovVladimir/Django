@@ -19,11 +19,12 @@ def get_order(request, order_id):
     }
     return render(request, "hw3/order.html", context)
 
-# TODO не получается реализовать вывоз заказов по срокам создания
+
 def get_order_gt(request, delta):
     order_list = []
     orders = Order.objects.all()
     corrent_date = date.today()
+
     for order in orders:
         print(order.date_order)
         res_delta = (corrent_date - order.date_order).days
@@ -35,11 +36,12 @@ def get_order_gt(request, delta):
      }
     return render(request, "hw3/delta.html", context)
 
-# TODO не получается реализовать сортировку красово
+
 def get_order_sort(request):
     order_list_sort = {}
     orders = Order.objects.all()
     corrent_date = date.today()
+
     for order in orders:
         res_delta = (corrent_date - order.date_order).days
         order_list_sort.setdefault(order, res_delta)

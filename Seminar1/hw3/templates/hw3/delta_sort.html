@@ -6,23 +6,37 @@
 </head>
 <body>
 
-    {% for order, delta in orders.item %}
+    {% for order, delta in orders.items %}
 
-        <h3> заказы меньше 7 дней </h3>
+
         {% if delta < 7  %}
+        <h3> заказы меньше 7 дней </h3>
         <p>{{ order }}</p>
-        {% enf if %}
+        {% endif %}
 
-        <h3> заказы меньше от 7 до 30 дней </h3>
+    {% endfor %}
+
+    {% for order, delta in orders.items %}
         {% if delta > 7 and delta < 30  %}
-        <p>{{ order }}</p>
-        {% enf if %}
+        <h3> заказы меньше от 7 до 30 дней </h3>
+        <p>{{ order }} {{ delta }}</p>
 
-        <h3> заказы меньше свыше 30 дней </h3>
+        {% endif %}
+
+    {% endfor %}
+
+    {% for order, delta in orders.items %}
         {% if delta > 30 and delta < 365  %}
+        <h3> заказы меньше свыше 30 дней </h3>
         <p>{{ order }}</p>
-        {% enf if %}
+        {% endif %}
+    {% endfor %}
 
+    {% for order, delta in orders.items %}
+        {% if  delta > 365  %}
+        <h3> заказы меньше свыше 365 дней </h3>
+        <p>{{ order }}</p>
+        {% endif %}
 
     {% endfor %}
 </body>

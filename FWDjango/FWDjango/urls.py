@@ -25,4 +25,5 @@ urlpatterns = [
     path('less3/', include('less_3_tmpl.urls')),
     path('', index),
     path('less4/', include('less_4_form.urls')),
+    # path('less5/', include('less_5_adm.urls')),
 ]

@@ -1,7 +1,9 @@
 from django import forms
+from hw3.models import Product
 
 
 class ProductForm(forms.Form):
+    products = forms.ModelChoiceField(label='Продукты', queryset=Product.objects.all())
     name = forms.CharField(max_length=100,
                            widget=forms.TextInput(attrs={'class': 'form-control',
                                                          'placeholder': 'Введите назв продукта'}))

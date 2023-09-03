@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Order, Product, Client
-from datetime import datetime, date
+from datetime import date
 
 
 def get_orders(request):
@@ -26,7 +26,6 @@ def get_order_gt(request, delta):
     corrent_date = date.today()
 
     for order in orders:
-        print(order.date_order)
         res_delta = (corrent_date - order.date_order).days
         if res_delta > delta:
             order_list.append(order)

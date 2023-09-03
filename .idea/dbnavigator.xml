@@ -20,9 +20,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" object-ref="schemas/main/tables/hw3_order" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="3ba3b6f7-51e6-4e52-a4d3-fd8c5ea0b1cf" dataset="main.less_3_tmpl_user" active-filter-id="EMPTY_FILTER" />

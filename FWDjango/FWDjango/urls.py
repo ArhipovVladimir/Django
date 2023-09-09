@@ -25,5 +25,6 @@ urlpatterns = [
     path('less3/', include('less_3_tmpl.urls')),
     path('', index),
     path('less4/', include('less_4_form.urls')),
-    # path('less5/', include('less_5_adm.urls')),
+    path('less6/', include('less_6_server.urls')),
+    # path('__debug__/', include("debug_toolbar.urls")),
 ]

@@ -1,6 +1,6 @@
 import form as form
 from django.shortcuts import render
-from .forms import ProductForm
+from .forms import ProductForm, ProductFormUpdate
 from hw3.models import Product
 import logging
 from django.core.files.storage import FileSystemStorage
@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 def add_product(request):
+    name = 'Добавление продукта'
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         message = 'Ошибка в данных'
@@ -28,12 +29,13 @@ def add_product(request):
         form = ProductForm()
         message = 'Заполните форму'
 
-    return render(request, 'hw4/product.html', {'form': form, 'message': message})
+    return render(request, 'hw4/product.html', {'form': form, 'message': message, 'name': name})
 
 
 def update_product(request):
+    name = 'Изменение продукта'
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = ProductFormUpdate(request.POST, request.FILES)
         message = 'Ошибка в данных'
         if form.is_valid():
             product = form.cleaned_data['products']
@@ -55,10 +57,18 @@ def update_product(request):
             old_product.save()
             message = 'product сохранён'
     else:
-        form = ProductForm()
+        form = ProductFormUpdate()
         message = 'Заполните форму'
 
-    return render(request, 'hw4/product.html', {'form': form, 'message': message})
+    return render(request, 'hw4/product.html', {'form': form, 'message': message, 'name': name})
+
+
+def index(request):
+    return render(request, 'hw4/index.html')
+
+
+def about(request):
+    return render(request, 'hw4/about.html')
 
 #
 #

@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'sem_3_app/bases_anton.html' %}
 
 {% block content %}
-    <h2>добавление товара</h2>
+    <h2>{{ name }}</h2>
     {{ message }}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}

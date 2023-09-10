@@ -1,11 +1,11 @@
 from django.urls import path
-from hw4.views import add_product, update_product
+from hw4.views import add_product, update_product, about
 
 
 urlpatterns = [
      path('add_product/', add_product, name='add_product'),
      path('update_product/', update_product, name='update_product'),
-     # path('delta/<int:delta>/', get_order_gt, name='get_order_gt'),
+     path('about/', about, name='about'),
      # path('sort/', get_order_sort, name='get_order_sort'),
 
 ]

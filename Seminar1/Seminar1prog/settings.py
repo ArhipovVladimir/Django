@@ -23,9 +23,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$ol_zgqd^pb2phrhliensv=44l)l6r*jv92a369mkcfwv7j!z@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+import os
+
+# SECRET_KEY = os.getenv('SECRET_KEY =')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'arhipov05.pythonanywhere.com'
+]
+
 
 
 # Application definition
@@ -90,6 +101,20 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'arhipov05$default',
+#         'USER': 'arhipov05',
+#         'PASSWORD': os.getenv('MySQL_PASSWORD'),
+#         'HOST': 'arhipov05.mysql.pythonanywhere-services.com',
+#         'OPTIONS': {
+#                 'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
+#             'charset': 'utf8mb4',
+#         },
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -126,6 +151,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

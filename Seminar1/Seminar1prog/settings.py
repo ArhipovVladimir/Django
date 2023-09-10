@@ -20,21 +20,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$ol_zgqd^pb2phrhliensv=44l)l6r*jv92a369mkcfwv7j!z@'
+# SECRET_KEY = 'django-insecure-$ol_zgqd^pb2phrhliensv=44l)l6r*jv92a369mkcfwv7j!z@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
 import os
 
-# SECRET_KEY = os.getenv('SECRET_KEY =')
+SECRET_KEY = os.getenv('SECRET_KEY =')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'arhipov05.pythonanywhere.com'
+    # '127.0.0.1',
+    'arhipof05.pythonanywhere.com'
 ]
 
 
@@ -93,27 +93,27 @@ WSGI_APPLICATION = 'Seminar1prog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'arhipof05$default',
+        'USER': 'arhipof05',
+        'PASSWORD': os.getenv('MySQL_PASSWORD'),
+        'HOST': 'arhipof05.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+                'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        },
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'arhipov05$default',
-#         'USER': 'arhipov05',
-#         'PASSWORD': os.getenv('MySQL_PASSWORD'),
-#         'HOST': 'arhipov05.mysql.pythonanywhere-services.com',
-#         'OPTIONS': {
-#                 'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
-#             'charset': 'utf8mb4',
-#         },
-#     }
-# }
 
 
 # Password validation
